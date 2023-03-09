@@ -1,0 +1,102 @@
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+  padding: 5px;
+  background-color: #e7dada;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  margin: 20px;
+}
+.blog_card-buttons {
+  align-items: center;
+  padding-bottom: 0px;
+  /* padding-left: 50px;
+  padding-right: 50px; */
+  justify-content: flex-end;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+.blog-card .delete {
+  justify-content: flex-end;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background: #db1009;
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  padding: 5px;
+  margin-left: 10px;
+  margin-bottom: 1.5rem;
+}
+.blog-card .edit {
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background: #b5cc04;
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  padding: 5px;
+  margin-left: 10px;
+  margin-bottom: 1.5rem;
+}
+.blog-card-content {
+  padding: 10px;
+}
+
+.blog-card-content h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.blog-card-content p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.blog-card-author {
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.blog-card-date {
+  font-style: normal;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.blog-card-text {
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.blog-card-content a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #000;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.blog-card-content a:hover {
+  background-color: #000;
+  color: #fff;
+}

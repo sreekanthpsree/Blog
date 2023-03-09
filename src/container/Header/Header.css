@@ -1,0 +1,53 @@
+:root {
+  --font-family: "Manrope", sans-serif;
+
+  --gradient-text: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+}
+
+.blog_header {
+  display: flex;
+}
+.blog_header-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-right: 5rem;
+}
+.blog_header-content h1 {
+  font-family: var();
+  font-weight: 800;
+  font-size: 55px;
+  line-height: 75px;
+  letter-spacing: normal;
+}
+.blog_header-content p {
+  margin-left: 10px;
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27px;
+  color: #aed6fe;
+  margin-top: 1.5rem;
+}
+.blog_header-content_button button {
+  padding: 0.5rem 1rem;
+  color: #fff;
+  margin-top: 1rem;
+  /* margin-left: 0; */
+  margin-right: 0;
+  background: #ff5820;
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  padding: 5px;
+  margin-left: 10px;
+  margin-bottom: 1.5rem;
+}

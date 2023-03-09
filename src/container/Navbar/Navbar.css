@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+.blog_navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 6rem;
+  max-height: 90px;
+}
+.blog_navbar-links {
+  display: flex;
+  flex: 1;
+  /* justify-content: flex-end; */
+  align-items: center;
+}
+
+.blog_navbar-links__menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.blog_navbar-links__menu p {
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: capitalize;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+.blog_navbar-links__menu button {
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background: #ff5820;
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+.blog_navbar-links__logo img {
+  margin-right: 0px;
+  /* margin-top: 30px; */
+  justify-content: start;
+  width: 100px;
+  height: 80px;
+}

@@ -1,0 +1,56 @@
+.signupParentDiv {
+  /* border: 3px solid black; */
+  width: 350px;
+  height: 350px;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+
+  /* background-color: rgb(242, 242, 244); */
+  color: black;
+}
+
+.signupParentDiv .input {
+  margin: auto;
+  /* justify-content: space-between; */
+  border: 3px solid black;
+  border-radius: 10px;
+  border: 3px solid black;
+  display: flex;
+}
+
+.signupParentDiv button {
+  margin-top: 1.5rem;
+  width: 100%;
+  height: 48px;
+  /* border-color: transparent; */
+  background-color: #002f34;
+  color: whitesmoke;
+  font-weight: 900;
+  border-radius: 10px;
+}
+.signupParentDiv button:hover {
+  background-color: white;
+  color: #002f34;
+  border: 2px solid #002f34;
+}
+
+.signupParentDiv a {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+p {
+  color: red;
+}
+.errorInput {
+  background-color: rgba(255, 0, 0, 0.3);
+  outline-color: red;
+}
+label {
+  padding: 10px;
+}

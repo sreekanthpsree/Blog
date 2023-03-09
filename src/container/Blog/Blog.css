@@ -1,0 +1,16 @@
+.blog {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  background: var(--color-footer);
+  background: conic-gradient(from 45deg, #070e5e, #4768a9);
+}
+.blog_post {
+  justify-content: center;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 1.5rem;
+  height: 100%;
+}
