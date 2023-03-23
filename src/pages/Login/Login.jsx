@@ -5,6 +5,7 @@ import { collection, db } from "../../firebase/config";
 
 import { useNavigate } from "react-router-dom";
 import { getDocs, query, where } from "firebase/firestore/lite";
+import { validateForm } from "../../helpers/validateForm";
 
 function Login() {
   const [loginValues, setLoginValues] = useState({});
@@ -18,36 +19,20 @@ function Login() {
   };
   const Navigate = useNavigate();
 
-  const validate = (values) => {
-    const errors = {};
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-
-    if (!values.email) {
-      errors.email = "Email required";
-    } else if (!regex.test(values.email)) {
-      errors.email = "Please enter a valid email";
-    }
-    if (!values.password) {
-      errors.password = "Password required";
-    }
-
-    return errors;
-  };
   const loginSubmitHandle = async (e) => {
     e.preventDefault();
-    setLoginErrorValues(validate(loginValues));
+    setLoginErrorValues(validateForm(loginValues));
 
     const userDetails = query(
       collection(db, "users"),
       where("email", "==", loginValues.email),
       where("password", "==", loginValues.password)
     );
-    const snap = await getDocs(userDetails);
-    snap.forEach((doc) => {
+    const userData = await getDocs(userDetails);
+    userData.forEach((doc) => {
       const userData = doc.data();
       localStorage.setItem("name", userData.username);
       localStorage.setItem("phone", userData.phone);
-      localStorage.setItem("email", userData.email);
       localStorage.setItem("email", userData.email);
       localStorage.setItem("id", userData.id);
     });

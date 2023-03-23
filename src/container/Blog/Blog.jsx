@@ -1,47 +1,41 @@
 import React, { useState } from "react";
-import Post from "../../components/Post/Post";
+import Post from "../../components/Post/BlogPost";
 import "./Blog.css";
 import { collection, db, getDocs } from "../../firebase/config";
 import { useEffect } from "react";
+import { sort } from "../../helpers/Sorting";
 
-const blogData = collection(db, "blog");
+const blogCollection = collection(db, "blog");
 
 function Blog() {
-  const [blogDetails, setBlogDetails] = useState([]);
+  const [blogPosts, setBlogPosts] = useState([]);
+
   useEffect(() => {
     (async () => {
       getBlogs();
     })();
-  }, []);
+  }, [blogPosts]);
+
   const getBlogs = async () => {
-    await getDocs(blogData).then((response) => {
-      const allPosts = response.docs.map((obj) => {
-        return {
-          ...obj.data(),
-          id: obj.id,
-        };
-      });
-      console.log(allPosts, "1");
-      const dataPost = allPosts.sort(function (a, b) {
-        var keyA = a.createdDate,
-          keyB = b.createdDate;
-        if (keyA < keyB) return 1;
-        if (keyA > keyB) return -1;
-        return 0;
-      });
-      console.log(dataPost, "3");
-      setBlogDetails(allPosts);
+    const response = await getDocs(blogCollection);
+    const blogs = response.docs.map((blogData) => {
+      return {
+        ...blogData.data(),
+        id: blogData.id,
+      };
     });
+    sort(blogs);
+    setBlogPosts(blogs);
   };
+
   return (
     <div className="blog">
       <div className="blog_post">
-        {blogDetails.map((obj) => {
+        {blogPosts.map((obj) => {
           const options = { year: "numeric", month: "2-digit", day: "2-digit" };
           const date = obj.createdDate
             .toDate()
             .toLocaleDateString("en-in", options);
-          // console.log(dateString);
           return (
             <Post
               id={obj.id}
