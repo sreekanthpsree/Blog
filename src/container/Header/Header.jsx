@@ -26,7 +26,7 @@ function Header() {
           and the teams swap roles. The game is adjudicated by two umpires,
           aided by a third umpire and match referee in international matches.
           They communicate with two off-field scorers who record the match's
-          statistical information.
+          statistical information .
         </p>
         <div className="blog_header-content_button">
           {localStorage.getItem("name") && (
